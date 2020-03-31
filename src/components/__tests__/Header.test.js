@@ -1,9 +1,19 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { shallow } from 'enzyme';
 import Header from '../Header';
 
-test('renders without crashing', () => {
-  const { getByText } = render(<Header />);
-  const linkElement = getByText(/This is the header/i);
-  expect(linkElement).toBeInTheDocument();
+describe('Header', () => {
+  let mountedHeader;
+  beforeEach(() => {
+    mountedHeader = shallow(<Header />);
+  });
+
+  it('renders without crashing', () => {
+    shallow(<Header />);
+  });
+
+  it('renders a Header', () => {
+    const logoImg = mountedHeader.find('img[src="images/wired-brain-coffee-logo.png"]');
+    expect(logoImg.length).toBe(1);
+  });
 });

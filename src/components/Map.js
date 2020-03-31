@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
+import './Map.css';
 
 class Map extends Component {
   render() {
     return (
-      <img 
-        src="default.jpg"
-        alt="the map"
-      />
+      <div className="MapBox">
+        <img 
+          src="images/none.png"
+          alt="the map"
+        />
+      </div>
     );
   }
 }

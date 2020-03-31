@@ -10,7 +10,7 @@ describe('StoreLocator', () => {
   });
 
   it('renders without crashing', () => {
-    let mountedStoreLocatorLocal = shallow(<StoreLocator />);
+    shallow(<StoreLocator />);
   });
 
   it('renders a header', () => {

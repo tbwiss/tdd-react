@@ -8,7 +8,10 @@ class StoreLocator extends React.Component {
     return (
       <>
         <Header/>
-        <Button /><Button />
+        <div>
+          <Button location="Portland" />
+          <Button location="Astoria" />
+        </div>
         <Map />
       </>
     );
