@@ -1,14 +1,11 @@
 import React from 'react';
-import Header from '../components/Header';
+import StoreLocator from './StoreLocator';
 import '../App.css';
 
 function App() {
   return (
     <div className="App">
-        <Header />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        <StoreLocator />
     </div>
   );
 }
