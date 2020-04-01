@@ -32,7 +32,7 @@ class StoreLocator extends React.Component {
     return (
       <>
         <Header/>
-        <div>
+        <div className="buttons">
           {
             this.state.shops.map(shop => (
               <Button

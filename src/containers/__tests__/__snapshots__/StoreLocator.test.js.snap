@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StoreLocator renders correctly 1`] = `
+Array [
+  <div
+    className="Header"
+  >
+    <img
+      alt="Wired Brain logo"
+      src="images/wired-brain-coffee-logo.png"
+    />
+  </div>,
+  <div
+    className="buttons"
+  />,
+  <div
+    className="MapBox"
+  >
+    <img
+      alt="the map"
+      src="images/none.png"
+    />
+  </div>,
+]
+`;
