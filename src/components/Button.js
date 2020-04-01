@@ -3,12 +3,19 @@ import './Button.css';
 
 class Button extends Component {
   render() {
-  return (
-    <button className="location-button">
-      {this.props.location ? this.props.location : 'All Locations'}
-    </button>
-    );
-  }
+    const { location } = this.props;
+    const value = location ? location : 'none';
+    
+    return (
+      <button 
+        className="location-button"
+        onClick={event => this.props.handleClick(event)}
+        value={value}
+      >
+        {location ? location : 'All Locations'}
+      </button>
+      );
+    }
 }
 
 export default Button;

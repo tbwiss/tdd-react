@@ -1,5 +1,5 @@
-const mapChooser = (locationName = 'default') => {
-  return `${locationName}.jpg`;
+const mapChooser = (locationName = 'none') => {
+  return `${locationName}.png`;
 }
 
 export default mapChooser;

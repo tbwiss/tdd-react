@@ -3,16 +3,16 @@ import mapChooser from '../mapChooser';
 describe('mapChooser', () => {
 
     ['portland', 'astoria'].forEach(location => {
-    it(`return ${location}.jpg when input is ${location}`, done => {
-        const expected = `${location}.jpg`;
+    it(`return ${location}.png when input is ${location}`, done => {
+        const expected = `${location}.png`;
         const actual = mapChooser(location);
         expect(actual).toEqual(expected);
         done();
       });
     });
 
-it('return default.jpg when input is null', done => {
-    const expected = 'default.jpg';
+it('return none.png when input is null', done => {
+    const expected = 'none.png';
     const actual = mapChooser();
     expect(actual).toEqual(expected);
     done();

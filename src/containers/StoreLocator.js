@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../components/Header';
 import Button from '../components/Button';
 import Map from '../components/Map';
+import mapChooser from '../mapChooser';
 
 class StoreLocator extends React.Component {
   constructor(props) {
@@ -25,6 +26,14 @@ class StoreLocator extends React.Component {
     this.state = {
       currentMap: 'none.png'
     }
+    this.chooseMap = this.chooseMap.bind(this);
+  }
+
+  chooseMap(event) {
+    if (event && event.persist) {
+      event.persist();
+    }
+    this.setState({ currentMap: mapChooser(event.target.value) });
   }
 
   render () {
@@ -35,6 +44,7 @@ class StoreLocator extends React.Component {
           {
             this.shops.map(shop => (
               <Button
+                handleClick={event => this.chooseMap(event)}
                 key={`${shop.location}+${shop.address}`}
                 location={shop.location}
               />
